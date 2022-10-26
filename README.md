@@ -67,7 +67,7 @@
 ## ⚡️About The Project
 This is Demo Project for Spring boot with docker. <br>
 As of now, running application as container way is the best option to manage application deployment. (you can find more about benefits of using docker in google). <br>
-You can learn how to add configuration in Dockerfile to get dockerized application. <br>
+You can learn how to add configuration in Dockerfile to build dockerized application. <br>
 I've dropped some docker commands to run application in below [Instruction](#instruction) section. <br>
 For more about docker and docker commands, you can learn more about in google.
 
