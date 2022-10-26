@@ -181,10 +181,10 @@ You need to install `Docker` in your machine. [Get Docker] (https://www.docker.c
   * Type
     ```sh
     docker stop {container_id}
-
   * here, you can get your application container id by typing `docker ps`. (If your container is already stopped, you cannot see that by `docker ps` and you need to find stopped containers with `docker ps -a`).
+  * copy your container id and put it instead {} brackets variable. eg. `docker stop 12077ee7d46f`
 
-* If you want to start the application, you can start application easily with below command.
+* If you want to start the application next time, you can start application easily with below command.
 * Please note that, you don't need to create `image` again if you want to re-start application which is stopped.
 * That is the one of the good approach using container for running application. All you need is just `start` and `stop` to run, stop your application.
   * Type
