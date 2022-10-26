@@ -134,7 +134,7 @@ You need to install `Docker` in your machine. [Get Docker] (https://www.docker.c
     docker build -t spring-boot-docker-sample .
 
   * In there, you can define your application image name as you want instead of spring-boot-docker-sample.
-  * In there, you need to add dot '.' at the end of build command by spacing.
+  * In there, you need to add dot `(.)` at the end of build command by spacing.
   * In there, you can add tag version after application name like below, if you don't set tag version, the application will go with tag version: latest as default.
   * with tag version -> `docker build -t spring-boot-docker-sample:1.0 .`
 
@@ -158,8 +158,8 @@ You need to install `Docker` in your machine. [Get Docker] (https://www.docker.c
   * the last word is your image name and if you set tag version when you create image, <br>
   you need to add that version in run command like `docker run -d -p 8080:8080 spring-boot-docker-demo:1.0`
 
-* After that, you can test application is running well or not by calling api which I added in this demo-application <br> 
- call `http://localhost:8080/spring-boot-docker-sample/getHello` via Browser or Postman.
+* After that, you can test application is running well or not by calling api which I added in this demo-application. <br> 
+ Call `http://localhost:8080/spring-boot-docker-sample/getHello` via Browser or Postman.
 
 * Check container
   * Type (check running containers)
@@ -176,26 +176,37 @@ You need to install `Docker` in your machine. [Get Docker] (https://www.docker.c
  run without detached mode `docker run -p 8080:8080 spring-boot-docker-demo` <br>
  you can stop (terminate) application by pressing Ctrl+C when you run application without detached mode. <br>
 
-* If you run application with detached mode and if you want to stop application, you can stop container. <br>
- Please note that If you don't stop container, your application will run background the whole time.
+* If you run application with detached mode and if you want to stop application, you can stop container.
+* Please note that If you don't stop container, your application will run background the whole time.
   * Type
     ```sh
     docker stop {container_id}
 
-  * here, you can get your application container id by typing `docker ps`. (If your container is already stopped, you cannot see that by `docker ps` and you need to find with `docker ps -a` for stopped containers and running containers).
+  * here, you can get your application container id by typing `docker ps`. (If your container is already stopped, you cannot see that by `docker ps` and you need to find stopped containers with `docker ps -a`).
+
+* If you want to start the application, you can start application easily with below command.
+* Please note that, you don't need to create `image` again if you want to re-start application which is stopped.
+* That is the one of the good approach using container for running application. All you need is just `start` and `stop` to run, stop your application.
+  * Type
+    ```sh
+    docker start {container_id}
+  * here, you can get your stopped application container id by typing `docker ps -a`.
+  * here, `-a` flag is because if you stopped container, you cannot see that container id by typing `docker ps`. That's why need to put `-a` to get stopped container id.
+
 
 * If you want to delete your application container, you need to stop container first with above step.
+* Please note that, it's better deleting unnecessary container or unsuccessful container as to reduce resource usage in your machine.
   * Type (if application is running, you need to stop with `docker stop` command first)
       ```sh
       docker rm {container_id}
   * here, you can get your application container id by typing `docker ps -a`. 
-  * here, `-a` flag is because if you stop container, you can see that container id by typing `docker ps`. That's why need to put `-a` to get stopped container id.
+  * here, `-a` flag is because if you stop container, you cannot see that container id by typing `docker ps`. That's why need to put `-a` to get stopped container id.
 
 * If you want to delete your application image, you need to stop and delete container first with above step.
   * Type (if container is still alive, you need to delete container first before deleting image)
     ```sh
     docker rmi {image_id}
-  * here, you can get your application container id by typing `docker images`.
+  * here, you can get your application image id by typing `docker images`.
 
 * If you get exception error for successful running application, or if you want to check your application inside container, <br>
  you can either go inside into container and see logs, folder, etc. Every application has own containers.
