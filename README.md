@@ -48,7 +48,7 @@
 
 
 # spring-boot-docker-sample
-* This is the sample project for changing depend on environment by using Spring profile active.
+* This is the sample project for spring-boot using docker and build dockerized application.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
