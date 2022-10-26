@@ -98,7 +98,7 @@ If you are not good enough in basic API knowledge with Java Spring Boot and othe
 Click below links.
 * [Spring Boot Sample CRUD Application](https://github.com/yewin-mm/spring-boot-sample-crud) (for sample CRUD application)
 * [Reading Values from Properties files](https://github.com/yewin-mm/reading-properties-file-values) (for reading values from properties files)
-* [Some Docker Basic commands](https://www.edureka.co/blog/docker-commands/) (for reading values from properties files)
+* [Some Docker Basic commands](https://www.edureka.co/blog/docker-commands/) (from edureka website)
 
 
 
