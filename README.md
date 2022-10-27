@@ -213,7 +213,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * Type
       ```sh
       docker exec -it {container_id} /bin/sh
-  * here, you can get your application container id by typing `docker ps`. If container is not running, you can go inside container.
+  * here, you can get your application container id by typing `docker ps`. If container is not up (not running), you can't go inside container.
   * here, you can leave inside docker container by typing `exit`.
 
 * Read `Dockerfile` again under application folder path carefully and see the comment in there.
