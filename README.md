@@ -116,8 +116,8 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
 
 <a name="instruction"></a>
 ### 📝 Instruction
-* (Without Using Docker) If you don't want to use docker and just for testing application, you can directly run the project in your IDE. <br>
-* (Without Docker), Open Docker Desktop in your machine. (Start docker). <br>
+* (Without Using Docker) If you don't want to use docker and just for testing application, you can directly run the project in your IDE. But this project purpose is to run with docker.
+* (With Docker), Open Docker Desktop in your machine. (Start docker).
 * First of all, you can check Dockerfile which under project folder.
 * You can't run your application as container without that Dockerfile. 
 * Go to your application folder with command prompt CMD (for window) or Terminal (for Mac and Linux) or you can open your IDE Terminal while you opening the project with your IDE. <br>
