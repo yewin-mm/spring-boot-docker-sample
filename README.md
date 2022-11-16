@@ -197,9 +197,9 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
 
 * If you want to check running application logs or your output log values, you can type docker logs option.
   * Type 
-  ```sh
+    ```sh
     docker logs -f -n 200 {container_id}
-  ```
+    ```
   * Here, -f mean follow the logs for upcoming logs and -n mean line number follow by number of lines to reduce appearing huge amount of logs.
   * You can reference for more details about logs in [Docker official log documentation](https://docs.docker.com/engine/reference/commandline/logs/) or you can find usage in google.
 
