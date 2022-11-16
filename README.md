@@ -196,7 +196,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * here, `-a` flag is because if you stopped container, you cannot see that container id by typing `docker ps`. That's why need to put `-a` to get stopped container id.
 
 * If you want to check running application logs or your output log values, you can type docker logs option.
-* Type 
+  * Type 
   ```sh
     docker logs -f -n 200 {container_id}
   ```
