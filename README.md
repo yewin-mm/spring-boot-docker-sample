@@ -107,7 +107,7 @@ Click below links.
 * Clone the repo
    ```sh
    git clone https://github.com/yewin-mm/spring-boot-docker-sample.git
-
+   ```
 <a name="prerequisites"></a>
 ### 🔑 Prerequisites
 Prerequisites can be found in here [Spring Boot Application Instruction](https://github.com/yewin-mm/spring-boot-app-instruction). <br>
@@ -131,7 +131,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * Type
     ```sh
     docker build -t spring-boot-docker-sample .
-
+    ```
   * In there, you can define your application image name as you want instead of spring-boot-docker-sample.
   * In there, you need to add dot `(.)` at the end of build command by spacing.
   * In there, you can add tag version after application name like below, if you don't set tag version, the application will go with tag version: latest as default.
@@ -140,15 +140,18 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * You can check your created docker images with below command.
   * ```sh
     docker images
-
+    ```
   * Here, you can see Repository (image name), Tag (version), Image Id, Created date, etc.
 
 * Run docker images as container
   * Type
     ```sh
     docker run -d -p 8080:8080 spring-boot-docker-demo
-    
+    ```
   * In there, -d is detached mode and if we put -d in docker, application logs will be hidden and run in background.
+  * If your application can't call well, can't start you can remove `-d` option to see the running logs.
+  * If your application was running well, you can shut down application by clicking `ctrl+c` and can start the application by adding `-d` option again.
+  * You can check your container is running or not by typing `docker ps`.
   * -p is port which we need to add and bind with tcp port.
   * in -p 8080:8080,
     * the last 8080 is the port which run inside docker, and it's need to same with the port which we added in application.properties file.
@@ -171,7 +174,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     ```sh
     docker ps -a
 
-* If your application is not running well when application started up, you can check logs by removing -d to appear log in CMD or Terminal like below. <br>
+* If your application is not running well when application started up, you can check logs by removing `-d` to appear log in CMD or Terminal like below. <br>
  run without detached mode `docker run -p 8080:8080 spring-boot-docker-demo` <br>
  you can stop (terminate) application by pressing Ctrl+C when you run application without detached mode. <br>
 
@@ -192,6 +195,13 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * here, you can get your stopped application container id by typing `docker ps -a`.
   * here, `-a` flag is because if you stopped container, you cannot see that container id by typing `docker ps`. That's why need to put `-a` to get stopped container id.
 
+* If you want to check running application logs or your output log values, you can type docker logs option.
+* Type 
+  ```sh
+    docker logs -f -n 200 {container_id}
+  ```
+  * Here, -f mean follow the logs for upcoming logs and -n mean line number follow by number of lines to reduce appearing huge amount of logs.
+  * You can reference for more details about logs in [Docker official log documentation](https://docs.docker.com/engine/reference/commandline/logs/) or you can find usage in google.
 
 * If you want to delete your application container, you need to stop container first with above step.
 * Please note that, it's better deleting unnecessary container or unsuccessful container as to reduce resource usage in your machine.
