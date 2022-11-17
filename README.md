@@ -202,6 +202,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     ```
   * Here, -f mean follow the logs for upcoming logs and -n mean line number follow by number of lines to reduce appearing huge amount of logs.
   * You can reference for more details about logs in [Docker official log documentation](https://docs.docker.com/engine/reference/commandline/logs/) or you can find usage in google.
+  * You can exit following logs by clicking `Ctrl+c`.
 
 * If you want to delete your application container, you need to stop container first with above step.
 * Please note that, it's better deleting unnecessary container or unsuccessful container as to reduce resource usage in your machine.
@@ -218,13 +219,14 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * here, you can get your application image id by typing `docker images`.
 
 * If you get exception error for successful running application, or if you want to check your application inside container, <br>
- you can either go inside into container and see logs, folder, etc. Every application has own containers.
+ you can either go inside into container for seeing logs, jar file as your path, folder, etc. Every application has own containers.
 * To go inside your application container
   * Type
       ```sh
       docker exec -it {container_id} /bin/sh
-  * here, you can get your application container id by typing `docker ps`. If container is not up (not running), you can't go inside container.
-  * here, you can leave inside docker container by typing `exit`.
+  * here, you can get your application container id by typing `docker ps`. 
+  * If container is not up (not running), you can't go inside container.
+  * here, you can leave inside docker container by typing `exit` inside container.
 
 * Read `Dockerfile` again under application folder path carefully and see the comment in there.
 
