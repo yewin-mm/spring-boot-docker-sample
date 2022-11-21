@@ -10,6 +10,7 @@ WORKDIR /opt/app
 ## copy jar file under target folder into docker contrainer /opt/app/ folder (cause WORKDIR keyword and that folder is inside docker contrainer)
 ## and rename that jar file into app.jar
 ## if we don't add WORKDIR keyword like above, it will copy under home default directory
+## Please make sure `spring-boot-docker-sample-0.0.1-SNAPSHOT.jar` is under target folder, if not so, you need to rename that jar file or rename in below.
 COPY target/spring-boot-docker-sample-0.0.1-SNAPSHOT.jar  app.jar
 
 ## you can do copy by using Argument variable like below instead of above line
