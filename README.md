@@ -129,6 +129,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
 * if you can't see docker version by above command, you need to open docker (docker desktop) or something wrong with your installation process for docker. Check more about docker installation error in google.
 * Create docker image
   * Before do below build command, 
+    * Please make sure Docker Desktop (Docker service) is open in your machine.
     * Please make sure your generated jar file (generate with above `mvn clean package`) is under target folder.
     * Because docker build image will read `Dockerfile` and do process as per `Dockerfile`, So, if your jar file name is not same with `Dockerfile`, you can't create image.
     * Please make sure your jar file name under target folder and jar file name in COPY keyword of `Dockerfile` must be same.
