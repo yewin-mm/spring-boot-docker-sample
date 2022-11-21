@@ -130,6 +130,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
 * Create docker image
 * Before do below build command, 
   * Please make sure your generated jar file (generate with above `mvn clean package`) is under target folder.
+  * Because docker build image will read `Dockerfile` and do process as per `Dockerfile`, So, if your jar file name is not same with `Dockerfile`, you can't create image.
   * Please make sure your jar file name under target folder and jar file name in COPY keyword of `Dockerfile` must be same.
   * If all are ok, create your application to docker image by below command.
   * Type
@@ -148,6 +149,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * Here, you can see Repository (image name), Tag (version), Image Id, Created date, etc.
 
 * Run docker images as container
+* Docker will run as container by reading image, So, please make sure your image is already created.
   * Type
     ```sh
     docker run -d -p 8080:8080 spring-boot-docker-demo
