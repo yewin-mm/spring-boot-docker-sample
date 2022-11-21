@@ -128,6 +128,10 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
 * Check docker version to make sure your installed docker is up or down by typing `docker --version`, 
 * if you can't see docker version by above command, you need to open docker (docker desktop) or something wrong with your installation process for docker. Check more about docker installation error in google.
 * Create docker image
+* Before do below build command, 
+  * Please make sure your generated jar file (generate with above `mvn clean package`) is under target folder.
+  * Please make sure your jar file name under target folder and jar file name in COPY keyword of `Dockerfile` must be same.
+  * If all are ok, create your application to docker image by below command.
   * Type
     ```sh
     docker build -t spring-boot-docker-sample .
