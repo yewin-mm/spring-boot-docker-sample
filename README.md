@@ -26,8 +26,6 @@
 [issues-url]: https://github.com/yewin-mm/spring-boot-docker-sample/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ye-win-1a33a292/
-[product-screenshot]: images/screenshot.png
-
 
 <h1 align="center">
   Overview
