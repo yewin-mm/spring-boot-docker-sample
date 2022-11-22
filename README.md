@@ -163,7 +163,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     * the first 8080 is the port which can call from outside and bind with inside running port 8080.
     * So, you can change the first port it to other ports like -p 9090:8080, and if so, you need to call the api of application by using 9090 port.
   * the last word is your image name and if you set tag version when you create image, <br>
-  you need to add that version in run command like `docker run -d -p 8080:8080 spring-boot-docker-demo:1.0`
+  you need to add that version in run command like `docker run -d -p 8080:8080 spring-boot-docker-sample:1.0`
 
 * After that, you can test application is running well or not by calling api which I added in this demo-application. <br> 
  Call `http://localhost:8080/spring-boot-docker-sample/getHello` via Browser or Postman.
@@ -180,7 +180,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     docker ps -a
 
 * If your application is not running well when application started up, you can check logs by removing `-d` to appear log in CMD or Terminal like below. <br>
- run without detached mode `docker run -p 8080:8080 spring-boot-docker-demo` <br>
+ run without detached mode `docker run -p 8080:8080 spring-boot-docker-sample` <br>
  you can stop (terminate) application by pressing Ctrl+C when you run application without detached mode. <br>
 
 * If you run application with detached mode and if you want to stop application, you can stop container.
