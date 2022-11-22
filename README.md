@@ -151,7 +151,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * Docker will run as container by reading image, So, please make sure your image is already created.
   * Type
     ```sh
-    docker run -d -p 8080:8080 spring-boot-docker-demo
+    docker run -d -p 8080:8080 spring-boot-docker-sample
     ```
   * In there, -d is detached mode and if we put -d in docker, application logs will be hidden and run in background.
   * If your application can't call well, can't start you can remove `-d` option to see the running logs.
