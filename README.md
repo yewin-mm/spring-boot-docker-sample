@@ -154,7 +154,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     docker run -d -p 8080:8080 spring-boot-docker-sample
     ```
   * In there, -d is detached mode and if we put -d in docker, application logs will be hidden and run in background.
-  * If your application can't call well, can't start you can remove `-d` option to see the running logs.
+  * If you can't call your application call well (app can't start), you can remove `-d` option to see the running logs.
   * If your application was running well, you can shut down application by clicking `ctrl+c` and can start the application by adding `-d` option again.
   * You can check your container is running or not by typing `docker ps`.
   * -p is port which we need to add and bind with tcp port.
