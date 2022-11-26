@@ -177,7 +177,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     ```sh
     docker ps -a
     
-* After application was running well as container, you can test application is running well or not by calling api which I added in this demo-application. <br> 
+* After application was running well as container, you can test application is alive or not by calling api which I added in this demo-application. <br> 
  Call `http://localhost:8080/spring-boot-docker-sample/getHello` via Browser or Postman.
 
 * If your application is not running well when application started up, you can check logs by removing `-d` to appear log in CMD or Terminal like below. <br>
