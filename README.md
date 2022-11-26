@@ -124,7 +124,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * Type -> `mvn clean package` or you can type `mvn clean package -DskipTests=true` for skipping test for unnecessary compile time error.
   * You can also type `mvn clean install` or `mvn clean install -DskipTests=true` for skipping compile time error.
 * Check docker version to make sure your installed docker is up or down by typing `docker --version`, 
-* if you can't see docker version by above command, you need to open docker (docker desktop) or something wrong with your installation process for docker. Check more about docker installation error in google.
+* If you can't see docker version by above command, you need to open docker (docker desktop) or something wrong with your installation process for docker. Check more about docker installation error in google.
 * Create docker image
   * Before do below build command, 
     * Please make sure Docker Desktop (Docker service) is open in your machine.
@@ -177,7 +177,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     ```sh
     docker ps -a
     
-* After application was runnint well as container, you can test application is running well or not by calling api which I added in this demo-application. <br> 
+* After application was running well as container, you can test application is running well or not by calling api which I added in this demo-application. <br> 
  Call `http://localhost:8080/spring-boot-docker-sample/getHello` via Browser or Postman.
 
 * If your application is not running well when application started up, you can check logs by removing `-d` to appear log in CMD or Terminal like below. <br>
