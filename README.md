@@ -145,7 +145,8 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * ```sh
     docker images
     ```
-  * Here, you can see Repository (image name), Tag (version), Image Id, Created date, etc.
+  * Here, If created, you can see Repository name (image name), Tag (version), Image Id, Created date, etc.
+  * If not created, you need to check Dockerfile like jar file name is same with target folder and your CMD or terminal path is under project directory or not.
 
 * Run docker images as container
   * Docker will run as container by reading image, So, please make sure your image is already created.
@@ -153,20 +154,17 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     ```sh
     docker run -d -p 8080:8080 spring-boot-docker-sample
     ```
-  * In there, -d is detached mode and if we put -d in docker, application logs will be hidden and run in background.
+  * In there, `-d` is detached mode and if we put `-d` in docker, application logs will be hidden and run in background.
   * If you can't call your application call well (app can't start), you can remove `-d` option to see the running logs.
-  * If your application was running well, you can shut down application by clicking `ctrl+c` and can start the application by adding `-d` option again.
+  * If your application was running well, you can shut down application by clicking `ctrl+c` if you run without `-d` option and you can start the application by adding `-d` option again.
   * You can check your container is running or not by typing `docker ps`.
-  * -p is port which we need to add and bind with tcp port.
-  * in -p 8080:8080,
-    * the last 8080 is the port which run inside docker, and it's need to same with the port which we added in application.properties file.
-    * the first 8080 is the port which can call from outside and bind with inside running port 8080.
-    * So, you can change the first port it to other ports like -p 9090:8080, and if so, you need to call the api of application by using 9090 port.
-  * the last word is your image name and if you set tag version when you create image, <br>
+  * `-p` is port which we need to add and bind with tcp port.
+  * In `-p` 8080:8080,
+    * The last 8080 is the port which run inside docker, and it's need to same with the port which we added (you can add port if you want) in application.properties file.
+    * The first 8080 is the port which can call from outside and bind with inside running port 8080.
+    * So, you can change the first port to other ports like -p 9090:8080, and if so, you need to call the api of application by using 9090 port.
+  * The last word is your image name and if you set tag version when you created image, <br>
   you need to add that version in run command like `docker run -d -p 8080:8080 spring-boot-docker-sample:1.0`
-
-* After that, you can test application is running well or not by calling api which I added in this demo-application. <br> 
- Call `http://localhost:8080/spring-boot-docker-sample/getHello` via Browser or Postman.
 
 * Check container
   * Type (check running containers)
@@ -178,6 +176,9 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * Type (check all containers including running container, not running container, unsuccessful running contrainer)
     ```sh
     docker ps -a
+    
+* After application was runnint well as container, you can test application is running well or not by calling api which I added in this demo-application. <br> 
+ Call `http://localhost:8080/spring-boot-docker-sample/getHello` via Browser or Postman.
 
 * If your application is not running well when application started up, you can check logs by removing `-d` to appear log in CMD or Terminal like below. <br>
  run without detached mode `docker run -p 8080:8080 spring-boot-docker-sample` <br>
