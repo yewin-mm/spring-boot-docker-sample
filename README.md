@@ -173,7 +173,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     
   * Here, you can see Container Id, Image name, etc.
 
-  * Type (check all containers including running container, not running container, unsuccessful running contrainer)
+  * Type (check all containers including running container, not running container, unsuccessful running container)
     ```sh
     docker ps -a
     
