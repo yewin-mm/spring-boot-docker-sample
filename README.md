@@ -244,8 +244,8 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * here, you can leave inside docker container by typing `exit` inside container.
   
 * Below are for cleaning all unused conatiners, images, networks and volumes
-  * If you've tested many containers and images and if you are lazy to remove (delete) tested many containers and images one by one, <br>
-  you can remove that by below command to reduce taking docker space on your disk.
+  * If you've tested many containers and images and if you are lazy to remove (delete) tested many containers and images `one by one`, <br>
+  you can remove that by below commands are to reduce taking docker space on your disk.
   * You should clean (remove) `unused containers and images` to reduce taking docker space. <br> 
   But if you've planned to use that container in the future, you don't need to remove the container and just stopping is ok. <br>
   You can even remove the container without removing its image if you've planned to use in the future.
@@ -273,13 +273,13 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
        docker volume prune
        ```
 
-  * To remove all unused containers, images and networks
+  * To remove all unused containers, images and networks (recommend ways)
     * Type
        ```sh
        docker system prune
        ```
 
-  * For more about multiple conatiners, images, etc cleaning, you can find in google.
+  * For more about cleaning multiple docker conatiners, images, etc, you can find in google.
 
 * Read `Dockerfile` again under application folder path carefully and see the comment in there.
 
