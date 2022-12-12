@@ -269,7 +269,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
        docker image prune
        ```
 
-  * To remove all unused networks (need to take care your network <br> because your container may just stop for a while and if that container used the network, that will also be removed as container is stopped that time if you do below command. <br> Please note that you can't start your container again after you clean the network which are mapping (bind) with container)
+  * To remove all unused networks <br> (need to take care your network because your container may just stop for a while and if that container used the network, that will also be removed as container is stopped that time if you do below command. <br> Please note that you can't start your container again after you clean the network which are mapping (bind) with container)
     * Type
        ```sh
        docker network prune
