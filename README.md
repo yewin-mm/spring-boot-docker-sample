@@ -242,6 +242,44 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * here, you can get your application container id by typing `docker ps`. 
   * If container is not up (not running), you can't go inside container.
   * here, you can leave inside docker container by typing `exit` inside container.
+  
+* Below are for cleaning all unused conatiners, images, networks and volumes
+  * If you've tested many containers and images and if you are lazy to remove (delete) tested many containers and images one by one, <br>
+  you can remove that by below command to reduce taking docker space on your disk.
+  * You should clean (remove) `unused containers and images` to reduce taking docker space. <br> 
+  But if you've planned to use that container in the future, you don't need to remove the container and just stopping is ok. <br>
+  You can even remove the container without removing its image if you've planned to use in the future.
+  * To remove all unused or stopped or unsuccessful containers
+    * Type 
+      ```sh
+      docker container prune
+      ```
+
+  * To remove all unused images
+    * Type
+       ```sh
+       docker image prune
+       ```
+
+  * To remove all unused networks
+    * Type
+       ```sh
+       docker network prune
+       ```
+
+  * To remove all unused volume (need to take care your volumes is used by other unactive containers which will use in future <br> because it may lose your data if you stored some data from database in that volume)
+    * Type
+       ```sh
+       docker volume prune
+       ```
+
+  * To remove all unused containers, images and networks
+    * Type
+       ```sh
+       docker system prune
+       ```
+
+  * For more about multiple conatiners, images, etc cleaning, you can find in google.
 
 * Read `Dockerfile` again under application folder path carefully and see the comment in there.
 
