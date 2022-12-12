@@ -242,6 +242,12 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * here, you can get your application container id by typing `docker ps`. 
   * If container is not up (not running), you can't go inside container.
   * here, you can leave inside docker container by typing `exit` inside container.
+
+* Check Docker disk space as some unnecessary images and unused containers may take much space
+  * Type 
+    ```sh
+    docker system df
+    ```
   
 * Below are for cleaning all unused conatiners, images, networks and volumes
   * If you've tested many containers and images and if you are lazy to remove (delete) tested many containers and images `one by one`, <br>
@@ -249,19 +255,21 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * You should clean (remove) `unused containers and images` to reduce taking docker space. <br> 
   But if you've planned to use that container in the future, you don't need to remove the container and just stopping is ok. <br>
   You can even remove the container without removing its image if you've planned to use in the future.
-  * To remove all unused or stopped or unsuccessful containers
+  * You can check disk space first by typing `docker system df`.
+  
+  * To remove all unused or stopped or unsuccessful containers (recommended way)
     * Type 
       ```sh
       docker container prune
       ```
 
-  * To remove all unused images
+  * To remove all unused images (recommended way)
     * Type
        ```sh
        docker image prune
        ```
 
-  * To remove all unused networks
+  * To remove all unused networks (need to take care your network <br> because your container may just stop for a while and if that container used the network, that will also be removed as container is stopped that time if you do below command. <br> Please note that you can't start your container again after you clean the network which are mapping (bind) with container)
     * Type
        ```sh
        docker network prune
@@ -273,7 +281,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
        docker volume prune
        ```
 
-  * To remove all unused containers, images and networks (recommend ways)
+  * To remove all unused containers, images and networks (including cache)
     * Type
        ```sh
        docker system prune
