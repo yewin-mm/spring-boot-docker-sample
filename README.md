@@ -275,7 +275,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
        docker network prune
        ```
 
-  * To remove all unused volume (need to take care your volumes is used by other unactive containers which will use in future <br> because it may lose your data if you stored some data from database in that volume)
+  * To remove all unused volume (need to take care your volumes is used by other unactive containers which will use in future <br> because it may lose your data if you stored some data from database in that volume) <br> You can do below command and if you don't want to lose data, please run your necessary containers and type below command, that will delete only unused volume and don't delete volume that are connected with running containers. <br> And you should delete unused volumes as some unnecessay volumes take much space.
     * Type
        ```sh
        docker volume prune
