@@ -239,6 +239,8 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
   * Type
       ```sh
       docker exec -it {container_id} /bin/bash
+      
+  * You can also type `docker exec -it {container_id} /bin/sh` or `docker exec -it {container_id} bash`
   * here, you can get your application container id by typing `docker ps`. 
   * If container is not up (not running), you can't go inside container.
   * here, you can leave inside docker container by typing `exit` inside container.
