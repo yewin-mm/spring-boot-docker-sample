@@ -37,8 +37,8 @@ ENTRYPOINT ["java","-jar","app.jar"]
 
 ## 
 #------------------------------------------------------------------
-### Below is to automatic generate jar file with docker
-### But In this project, I will do generate jar file with `mvn clean package`
+### Below is to automatic generate jar file with docker, so that you don't need to generate jar file, you just need docker build and docker run commands.
+### But In this project, I will do manual generate jar file with `mvn clean package`
 #------------------------------------------------------------------
 
 # there are two ways to generate jar file by using maven.
@@ -46,7 +46,7 @@ ENTRYPOINT ["java","-jar","app.jar"]
 # 2. copying .mvn folder
 
 ## is comment out for definition
-# is code that you can uncomment and test it
+# is code that you can uncomment and can test it without manual typing `mvn clean package` in your CMD or terminal
 
 ##1.
 ## pull maven image from DockerHub to run mvn command and give that name as builder to use in next step, you can give any name you want (here, I used multi-stage build which is better way using docker)
@@ -58,7 +58,7 @@ ENTRYPOINT ["java","-jar","app.jar"]
 ## generate jar file by using maven which we already add maven image in above, (you can use `mvn clean install -DskipTests`) (this step will take a few minutes)
 #RUN mvn clean package -DskipTests
 
-# you can find more about maven image tag versions in here, https://github.com/docker-library/docs/tree/master/maven
+## you can find more about maven image tag versions in here, https://github.com/docker-library/docs/tree/master/maven
 
 ##2.
 ## pull jdk for java which to run maven command and give that name as builder to use in next step, you can give any name you want (here, I used multi-stage build which is better way using docker)
