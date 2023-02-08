@@ -252,7 +252,7 @@ You need to install `Docker` in your machine. [Get Docker](https://www.docker.co
     ```
   
 * Below are for cleaning all unused containers, images, networks, volumes and build cache
-  * If you've testes many containers and images, it will create build cache and that cache will take much space on your disk.
+  * If you've tested many containers and images, it will create build cache and that cache will take much space on your disk.
   * To remove build cache
     * Type 
       ```sh
